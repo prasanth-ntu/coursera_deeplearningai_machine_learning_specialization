@@ -155,7 +155,7 @@ Notations
 - $x$ - input variable/features (e.g., House size in feet)
 - $y$ - output/Target variable (e.g., House price in $1000s)
 - $m$ - no. of training examples
-  - $(x, y)$ - single training example (e.g., $(2104,400)$)
+  - $(x, y)$ - single training example | e.g., $(2104,400)$
   - $(2104,400)$
   - test $(x, y) = (2104,400)$ test
   - test $(x^{(3)}, y^{(3)}) = (1534, 315)$ test $(x^{(3)}, y^{(3)}) = (1534, 315)$
