@@ -158,7 +158,7 @@ Notations
   - $(x, y)$ - single training example (e.g., )
   - $(2104,400)$
   - test $(x, y) = (2104,400)$ test
-  - test $(x^{(3)}, y^{(3)}) = (1534, 315)$ test
+  - test $(x^{(3)}, y^{(3)}) = (1534, 315)$ test $(x^{(3)}, y^{(3)}) = (1534, 315)$
   - $(x^{(i)}, y^{(i)})$ - $i^{th}$ training example (e.g., $(x^{(3)}, y^{(3)}) = (1534, 315)$)
   - Remember, $$x^{(i)} \neq $$
 
