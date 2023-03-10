@@ -150,23 +150,40 @@ Linear regression model
 <img src="attachments/regression_lr_p1_house_sizes_prices_2.png" width="50%">
 </p>
 
-Notations
+**Notations**
+<p align="center">
+<img src="attachments/regression_lr_p1_terminologies.png" width="60%">
+</p>
+
 - Training set - Dataset used ti train the model
 - $x$ - input variable/features (e.g., House size in feet)
 - $y$ - output/Target variable (e.g., House price in $1000s)
 - $m$ - no. of training examples
   - $(x, y)$ - single training example | e.g., $(2104,400)$
   - $(x^{(i)}, y^{(i)})$ - $i^{th}$ training example | e.g., $(x^{(3)}, y^{(3)}) = (1534, 315)$
-  - Remember, $X^{(i)} \neq X^{i}$
-
-<p align="center">
-<img src="attachments/regression_lr_p1_terminologies.png" width="60%">
-</p>
-
-
-regression_lr_p1_terminologies
+    - Here, $i$ refers to the index/row in the training set and is not an exponent
+    - Remember, $X^{(i)} \neq X^{i}$
 
 ### Linear regression model part 2
+
+<p align="center">
+<img src="attachments/regression_lr_p2_flow.png" width="60%">
+</p>
+
+When we train the model with training data, it will provide a function $f$, sometimes called as *hypothesis*. The job of the function is to take, input $x$ and estimate or predict the output $y$. This predicted output is $\hat{y}$.
+
+- $f$ - Function
+- $x$ - model input/features
+- $y$ - actual output/target
+- $\hat{y}$ - predicted/ estimated output 
+  - $\hat{y} = f(x)$
+
+How to represent, $f$?
+- $f_{w, b}{x} = wx + b$, assuming the function is a straight line
+  - $f$ is a function that takes $x$ as input, and depending upon the values of $w$ and $b$, $f$  will output some values of the prediction, $\hat{y}$.
+  - For simplicity, $f_{w, b}{x}$ will be represented as $f(x)$.
+
+> Univariate linear regression => Linear regression with one input variable.
 
 ### Optional lab: Model representation
 
