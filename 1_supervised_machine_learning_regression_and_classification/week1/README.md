@@ -155,7 +155,7 @@ Notations
 - $x$ - input variable/features (e.g., House size in feet)
 - $y$ - output/Target variable (e.g., House price in $1000s)
 - $m$ - no. of training examples
-  - $(x, y)$ - single training example (e.g., $(2104, 400)$)
+  - $(x, y)$ - single training example (e.g., $$(2104, 400)$$)
   - $(x^{(i)}, y^{(i)})$ - $i^{th}$ training example (e.g., $(x^{(3)}, y^{(3)}) = (1534, 315)$)
   - Remember, $$x^{(i)} \neq $$
 
