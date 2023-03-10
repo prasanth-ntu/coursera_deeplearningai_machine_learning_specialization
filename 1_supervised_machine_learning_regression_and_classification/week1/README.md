@@ -61,6 +61,7 @@ Of these two, supervised learning is the type of machine learning that is used m
 
 In this class, one of the relatively unique things you learn is you learn a lot about the best practices for how to actually develop a practical, valuable machine learning system. 
 
+
 <p align="center">
 <img src="attachments/machine_learning_algos_and_course_outline.png" width="60%">
 </p>
@@ -130,10 +131,40 @@ Supervised learning refers to algorithms that learn x to y or input to output ma
 ### Python and Jupyter Notebooks
 
 ## Practice Quiz: Supervised and Unsupervised learning
-Refer to ![greyhatguy007](greyhatguy007/Practice quiz- Supervised vs unsupervised learning/README.md) for now.
+Refer to [greyhatguy007](greyhatguy007/Practice%20quiz-%20Supervised%20vs%20unsupervised%20learning/README.md) solutions for now.
 
 ## Regression Model
 ### Linear regression model part 1
+Regression models: Any supervised model that preidcts a number such as 220,000 or 1.5 or -33.2.
+Clasification models" Predicts categories or discrete categories, such as predicting if a picture is a cat or dog. Or if given a medical record, it has to predict if a patient has a particular disease.
+
+Linear regression model
+- Model that fits a straight line to our data.
+- It's called regression model because it predicts the numbers as the output like prices in dollars.
+
+<p align="center">
+<img src="attachments/regression_lr_p1_house_sizes_prices.png" width="50%">
+</p>
+
+<p align="center">
+<img src="attachments/regression_lr_p1_house_sizes_prices_2.png" width="50%">
+</p>
+
+Notations
+- Training set - Dataset used ti train the model
+- $x$ - input variable/features (e.g., House size in feet)
+- $y$ - output/Target variable (e.g., House price in $1000s)
+- $m$ - no. of training examples
+  - $(x, y)$ - single training example (e.g., $(2104, 400)$)
+  - $(x^{(i)}, y^{(i)})$ - $i^{th}$ training example (e.g., $(x^{(3)}, y^{(3)}) = (1534, 315)$)
+  - Remember, $$x^{(i)} \neq $$
+
+<p align="center">
+<img src="attachments/regression_lr_p1_terminologies.png" width="60%">
+</p>
+
+
+regression_lr_p1_terminologies
 
 ### Linear regression model part 2
 
