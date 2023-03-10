@@ -157,6 +157,7 @@ Notations
 - $m$ - no. of training examples
   - $(x, y)$ - single training example (e.g., )
   - $(2104,400)$
+  - $(x, y) = (2104,400)$
   - $(x^{(i)}, y^{(i)})$ - $i^{th}$ training example (e.g., $(x^{(3)}, y^{(3)}) = (1534, 315)$)
   - Remember, $$x^{(i)} \neq $$
 
