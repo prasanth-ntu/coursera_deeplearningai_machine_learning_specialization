@@ -220,10 +220,12 @@ How to find $w$ and $b$, such that predicted value $\hat{y} _{i}$ is close to ac
 - Takes prediction $\hat{y} _{i}$ and compares it with to target $y _{i}$ by computing error as $\hat{y} _{i} - y _{i}$.
 - Then, let's compute the square of the error $\implies$  ${(\hat{y} _{i} - y _{i})}^{2}$
 - Let's compute it for different training examples  $\implies$ $\sum_{i=1}^{m}{(\hat{y} _{i} - y _{i})}^{2}$
-- To ensure that the cost function doesn't automatically get bigger with more training samples, let's compute the average squared error instead of total squared error $\implies$  $\frac{1}{2m}\sum_{i=1}^{m}{(\hat{y} _{i} - y _{i})}^{2}$
+- To ensure that the cost function doesn't automatically get bigger with more training samples, let's compute the average squared error instead of total squared error $\implies$  $\frac{1}{2m}\sum _{i=1}^{m}{(\hat{y} _{i} - y _{i})}^{2}$
 
 $$ J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(\hat{y}_{i} - y_{i})}^{2}$$  
 $$ J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w, b}{(x^{i})}  - y_{i})}^{2}$$  
+
+Test $\sum_{i=1}^{m}x$
 
 ### Cost function intuition
 regression_cost_function_intuition_5
