@@ -62,27 +62,75 @@ Of these two, supervised learning is the type of machine learning that is used m
 In this class, one of the relatively unique things you learn is you learn a lot about the best practices for how to actually develop a practical, valuable machine learning system. 
 
 <p align="center">
-<img src="attachments/machine_learning_algos_and_course_outline.png" width="70%">
+<img src="attachments/machine_learning_algos_and_course_outline.png" width="60%">
 </p>
 
 ### Supervised learning part 1
--  99 percent of the economic value created by machine learning today is through one type of machine learning, which is called supervised learning
+99 percent of the economic value created by machine learning today is through one type of machine learning, which is called supervised learning.
+
+Supervised learning refers to algorithms that learn x to y or input to output mappings.
 
 <p align="center">
 <img src="attachments/supervised_learning_part_1_what_is_it.png" width="50%">
 </p>
 
+<p align="center">
+<img src="attachments/supervised_learning_part_1_applications.png" width="50%">
+</p>
+
+<p align="center">
+<img src="attachments/supervised_learning_part_1_regression.png" width="50%">
+</p>
+
 ### Supervised learning part 2
+
+<p align="center">
+<img src="attachments/supervised_learning_part_2_breast_cancer_detection.png" width="50%">
+</p>
+<p align="center">
+<img src="attachments/supervised_learning_part_2_breast_cancer_detection_2.png" width="50%">
+</p>
+
+<p align="center">
+<img src="attachments/supervised_learning_part_2_wrapup.png" width="50%">
+</p>
+
 
 ### Unsupervised learning part 1
 
+<p align="center">
+<img src="attachments/unsupervised_learning_part_1_difference.png" width="50%">
+</p>
+
+<p align="center">
+<img src="attachments/unsupervised_learning_part_1_clustering_google_news.png" width="50%">
+</p>
+
+<p align="center">
+<img src="attachments/unsupervised_learning_part_1_clustering_dna_microarray.png" width="50%">
+</p>
+
+<p align="center">
+<img src="attachments/unsupervised_learning_part_1_clustering_grouping_customers.png" width="50%">
+</p>
+
 ### Unsupervised learning part 2
+
+<p align="center">
+<img src="attachments/unsupervised_learning_part_2_different_types.png" width="50%">
+</p>
+
+<p align="center">
+<img src="attachments/unsupervised_learning_part_2_question.png" width="50%">
+</p>
+
 
 ### Jupyter Notebooks
 
 ### Python and Jupyter Notebooks
 
 ## Practice Quiz: Supervised and Unsupervised learning
+Refer to ![greyhatguy007](greyhatguy007/Practice quiz- Supervised vs unsupervised learning/README.md) for now.
 
 ## Regression Model
 ### Linear regression model part 1
