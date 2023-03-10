@@ -215,12 +215,47 @@ $$ \hat{y} = f_{w, b}{(x)} = wx + b$$
 How to find $w$ and $b$, such that predicted value, $\hat{y}_{i}$ is close to actual value, $y_{i}$ for all $(x^{(i)}, y^{(i)})$ ?
 - To answer this question, let's first measure how well the line fits the training data using the cost function.
 
-Cost function
+**Cost function** - <u>Squared error</u> cost function 
+<br>*Let's build it step by step*
 - Takes prediction $\hat{y}_{i}$ and compares it with to target $y_{i}$ by computing error as $\hat{y}_{i} - y_{i}$.
+- Then, let's compute the square of the error $\implies$  ${(\hat{y}_{i} - y_{i})}^{2}$
+- Let's compute it for different training examples  $\implies$ $\sum_{i=1}^{m}{(\hat{y}_{i} - y_{i})}^{2}$
+- To ensure that the cost function doesn't automatically get bigger with more training samples, let's compute the average squared error instead of total squared error $\implies$  $\frac{1}{2m}\sum_{i=1}^{m}{(\hat{y}_{i} - y_{i})}^{2}$
 
-
+$$ J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(\hat{y}_{i} - y_{i})}^{2}$$  
+$$ J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w, b}{(x^{i})}  - y_{i})}^{2}$$  
 
 ### Cost function intuition
+regression_cost_function_intuition_5
+<p align="center">
+<img src="attachments/regression_cost_function_intuition_1.png" width="50%" padding="30px">
+</p>
+
+We want to fit the model using straight line, by choosing $w$ and $b$ such that it fits the training data well (i.e., by making $J(w,b)$ as small as possible).
+
+| Term | Org. equation | Simplified |
+| :---- | :-------------: | :----------: |
+| Model | $f_{w, b}{(x)} = wx + b$ |  $f_{w}{(x)} = wx$ by setting $b=0$|
+| Parameters | $w,b$ | $w$ |
+| Cost function | $J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w, b}{(x^{i})}-y_{i})}^{2}$ |  $J(w) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w,}{(x^{i})}-y_{i})}^{2}$ |
+| Goal | $\underset{w,b}{\text{minimize}}\phantom{1}J(w,b)$ | $\underset{w}{\text{minimize}}\phantom{1}J(w)$ |
+
+Using the simplified model, let's see how the cost function changes if we choose e different value for parameter $w$. 
+
+<p align="center">
+<img src="attachments/regression_cost_function_intuition_2.png" width="50%" padding="30px">
+
+</p>
+<p align="center">
+<img src="attachments/regression_cost_function_intuition_3.png" width="50%" padding="30px">
+</p>
+<p align="center">
+<img src="attachments/regression_cost_function_intuition_4.png" width="50%" padding="30px">
+</p>
+<p align="center">
+<img src="attachments/regression_cost_function_intuition_5.png" width="50%" padding="30px">
+</p>
+
 
 ### Visualizing the cost function
 
