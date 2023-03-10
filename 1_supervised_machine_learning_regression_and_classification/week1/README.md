@@ -179,15 +179,46 @@ When we train the model with training data, it will provide a function $f$, some
   - $\hat{y} = f(x)$
 
 How to represent, $f$?
-- $f_{w, b}{x} = wx + b$, assuming the function is a straight line
+- $f_{w, b}{(x)} = wx + b$, assuming the function is a straight line
   - $f$ is a function that takes $x$ as input, and depending upon the values of $w$ and $b$, $f$  will output some values of the prediction, $\hat{y}$.
-  - For simplicity, $f_{w, b}{x}$ will be represented as $f(x)$.
+  - For simplicity, $f_{w, b}{(x)}$ will be represented as $f(x)$.
 
 > Univariate linear regression => Linear regression with one input variable.
 
 ### Optional lab: Model representation
+Refer to [greyhatguy007](greyhatguy007/Optional%20Labs/C1_W1_Lab03_Model_Representation_Soln.ipynb) solutions for now.
 
 ### Cost function formula
+
+In order to implement linear regression, first step is to define cost function, which will tell us how well the model is doing.
+
+<p align="center">
+<img src="attachments/regression_cost_function_training_set.png" width="50%">
+</p>
+
+- Training set that contains input features $x$ and output targets $y$.
+- Model: Linear function, $f_{w, b}{(x)} = wx + b$
+  - $w$ and $b$ are called **parameters** (a.k.a **coefficients** or **weights**) of the model that can be adjusted during training to improve the model
+
+<p align="center">
+<img src="attachments/regression_cost_function_2.png" width="50%" padding="30px">
+</p>
+
+<p align="center">
+<img src="attachments/regression_cost_function_3.png" width="50%" padding="30px">
+</p>
+
+With linear regression, we want to choose value for parameters $w$ and $b$ such that the straight line we get from the function $f$ somehow fits the data well.
+
+$$ \hat{y} = f_{w, b}{(x)} = wx + b$$
+
+How to find $w$ and $b$, such that predicted value, $\hat{y}_{i}$ is close to actual value, $y_{i}$ for all $(x^{(i)}, y^{(i)})$ ?
+- To answer this question, let's first measure how well the line fits the training data using the cost function.
+
+Cost function
+- Takes prediction $\hat{y}_{i}$ and compares it with to target $y_{i}$ by computing error as $\hat{y}_{i} - y_{i}$.
+
+
 
 ### Cost function intuition
 
