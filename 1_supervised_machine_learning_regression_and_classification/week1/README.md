@@ -298,21 +298,65 @@ Since, we have two parameters $w$ and $b$ in this problem, the cost function has
 
 The bottom of above fig is a 3D-surface plot of the cost function, $J$. On upper right, we have contour plot of the same cost function. The two axis in the contour plot are $w$ and $b$. 
 
-
-
 ### Visualization examples
 
+<p align="center">
+<img src="attachments/regression_visualization_examples_1.png" width="38%" padding="30px">
+<img src="attachments/regression_visualization_examples_2.png" width="35%" padding="30px">
+</p>
+
+<p align="center">
+<img src="attachments/regression_visualization_examples_3.png" width="35%" padding="30px">
+<img src="attachments/regression_visualization_examples_4.png" width="39%" padding="30px">
+</p>
+
+| $w$ | $b$ | $f(x)$ | $J(w,b)$ |
+| ---: | ---: | ------: | -------- | 
+| $-0.15$ | $800$ | $-0.15x + 800$ | Not a great fit |
+| $0$ | $360$ | $0x + 360$ | Still bad fit |
+| $-0.15$ | $500$ | $-0.15x + 500$ | Not a great fit |
+| $0.13$ | $71$ | $0.13x + 71$ | Error is minimum |
+
+The table (and figures) above illustrates that different choices of parameters affect the line $f(x)$ and that corresponds to different values of cost $J$.
 
 ### Optional lab: Cost function
-
+Refer to [greyhatguy007](greyhatguy007/Optional%20Labs/C1_W1_Lab04_Cost_function_Soln.ipynb) solutions for now.
 
 ## Practice Quiz: Regression Model
 
-## Train the model with gradient descent
 
+## Train the model with gradient descent
 ### Gradient descent
 
+**Gradient Descent**
+- Algo that can be used to find the optimal parameters $w$ and $b$ that minimises the cost function, $J(w,b).
+- Is used not only in linear regression, but also for training some of the most advanced neural network models, including deep learning models.
+
+<p align="center">
+<img src="attachments/gradient_descent_1.png" width="35%" padding="30px">
+<img src="attachments/gradient_descent_2.png" width="40%" padding="30px">
+</p>
+
+For linear regression, the cost function is always squared error cost function. However, for **not** linear regressions, the cost function is not squared error cost function.
+
+In layman words, our goal is to start somewhere randomly in this cost function and get to the bottom of one of these valleys efficiently as possible.
+- What the gradient descent algorithm does is we are going to spin around 360 degrees and ask ourself, if I were to take a tiny little baby step in one direction, and I want to go downhill as quickly as possible to one of these valleys. $\Rightarrow$ Mathematically, this is the **direction of the steepest descent**. It means that when we take a tiny baby little step, this takes us downhill faster than a tiny little baby step we could have taken in any other direction. Eventually, we might end up in the local minima after series of this baby steps.
+
 ### Implementing gradient descent
+
+<p align="center">
+<img src="attachments/implementing_gradient_descent.png" width="50%" padding="30px">
+</p>
+
+Remember, in the above fig, $=$ means assignment, and not truth assertion (checking the equality of the two values). Also, remember all the parameters needs to be *simultaneously updated* (refer bottom left section)
+
+<u>*Repeat until convergence*</u>
+$$w=w-\alpha\frac{\partial}{\partial w}J(w,b)$$
+$$b=b-\alpha\frac{\partial}{\partial b}J(w,b)$$
+where 
+- $\alpha$ is **learning rate** between $0$ and $1$, that controls how big of a step we take downhill $\Rightarrow$ Huge $\alpha$ corresponds to very aggressive gradient descent procedure as will take huge steps downhill.
+- $\frac{\partial}{\partial w}J(w,b)$ is the **derivative** term of cost function $J$. In layman terms, it tell us the direction (of the steepest descent) in which we want to take baby steps.
+
 
 ### Gradient Descent intuition
 
