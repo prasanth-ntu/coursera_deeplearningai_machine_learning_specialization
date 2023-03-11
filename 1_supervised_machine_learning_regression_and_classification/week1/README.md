@@ -29,7 +29,7 @@
     - [Gradient Descent intuition](#gradient-descent-intuition)
     - [Learning rate](#learning-rate)
     - [Gradient descent for linear regression](#gradient-descent-for-linear-regression)
-    - [Running gradient descent](#running-gradient-descent)
+    - [Running gradient descent for Training linear regression](#running-gradient-descent-for-training-linear-regression)
     - [Optional lab: Gradient Descent](#optional-lab-gradient-descent)
   - [Practice Quiz: Train the model with gradient descent](#practice-quiz-train-the-model-with-gradient-descent)
 
@@ -416,18 +416,37 @@ But, how did we compute the the parital derivatives for $w$ and $b$?
 <img src="attachments/gradient_descent_for_linear_regression_2.png" width="40%" padding="30px">
 </p>
 
-$$ \frac{\partial}{\partial w}J(w,b) = \frac{\partial}{\partial w}\frac{1}{2m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})^2 = \frac{\partial}{\partial w}\frac{1}{2m}\sum _{i=1}^{m}(wx^{(i)}+b-y^{(i)})^2 \\
-\phantom{10}  = \frac{1}{2m}\sum _{i=1}^{m}(wx^{(i)}+b-y^{(i)})\times 2x^{(i)} = \frac{1}{m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})x^{i}$$
+$$ \frac{\partial}{\partial w}J(w,b) = \frac{\partial}{\partial w}\frac{1}{2m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})^2 = \frac{\partial}{\partial w}\frac{1}{2m}\sum _{i=1}^{m}(wx^{(i)}+b-y^{(i)})^2 $$
+$$ \phantom{10}  = \frac{1}{2m}\sum _{i=1}^{m}(wx^{(i)}+b-y^{(i)})\times 2x^{(i)} = \frac{1}{m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})x^{i}$$
+
+$$ \frac{\partial}{\partial b}J(w,b) = \frac{\partial}{\partial b}\frac{1}{2m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})^2 = \frac{\partial}{\partial b}\frac{1}{2m}\sum _{i=1}^{m}(wx^{(i)}+b-y^{(i)})^2 $$
+$$ \phantom{10}  = \frac{1}{2m}\sum _{i=1}^{m}(wx^{(i)}+b-y^{(i)})\times 2 = \frac{1}{m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})$$
 
 
 <p align="center">
 <img src="attachments/gradient_descent_for_linear_regression_3.png" width="40%" padding="30px">
 </p>
 
-### Running gradient descent
+### Running gradient descent for Training linear regression
 
+<p align="center">
+<img src="attachments/running_gradient_descent_1.png" width="40%" padding="30px">
+</p><p align="center">
 
+Linear regression model and data on the upper left. The contour plot of cost function on upper right. Bottom left contains the surface plot of the cost function.
+- $w = -0.1$, $b=900$ $\Rightarrow f(x)= 0.1x+900 \Rightarrow J(w,b) = 77237$ 
+- After taking a step in gradient descent, $\Rightarrow J(w,b) = 45401$ 
+- ...
+- After taking a step in gradient descent, $\Rightarrow J(w,b) = 2311$ 
+- As we take more steps, the cost is descreasing, and one the top right, we can see that the we have reached a global minimum and on the top left, we can see the straigth line fit (dark yellow color), which is relatively good fit to the data.
 
+<p align="center">
+<img src="attachments/running_gradient_descent_2_batch.png" width="40%" padding="30px">
+</p>
+
+> **Batch gradient descent**: **"Batch"** implies that for each step of gradient descent uses all the training examples, instead of subset of training data. The name "batch" might be not that intuitive though.
+
+There are other versions of gradient descent that do not look at the entire training set, but instead smaller subsets of training data for each update step. However, for linear regression, we will be using linear regression. 
 
 ### Optional lab: Gradient Descent
 
