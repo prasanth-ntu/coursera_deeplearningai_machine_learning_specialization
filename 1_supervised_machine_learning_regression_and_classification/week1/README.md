@@ -215,7 +215,7 @@ $$ \hat{y} = f_{w, b}{(x)} = wx + b$$
 How to find $w$ and $b$, such that predicted value $\hat{y} _{i}$ is close to actual value $y _{i}$ for all $(x^{(i)}, y^{(i)})$ ?
 - To answer this question, let's first measure how well the line fits the training data using the cost function. 
 
-**Cost function** - <u>Squared error</u> cost function 
+**Cost function** - <u>**Squared error**</u> cost function (for linear regression)
 <br>*Let's build it step by step*
 - Takes prediction $\hat{y} _{i}$ and compares it with to target $y _{i}$ by computing error as $\hat{y} _{i} - y _{i}$.
 - Then, let's compute the square of the error $\implies$  ${(\hat{y} _{i} - y _{i})}^{2}$
@@ -227,7 +227,7 @@ $$ J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w, b}{(x^{i})}  - y_{i})}^{2}$$
 
 
 ### Cost function intuition
-regression_cost_function_intuition_5
+9
 <p align="center">
 <img src="attachments/regression_cost_function_intuition_1.png" width="50%" padding="30px">
 </p>
@@ -355,17 +355,81 @@ $$w=w-\alpha\frac{\partial}{\partial w}J(w,b)$$
 $$b=b-\alpha\frac{\partial}{\partial b}J(w,b)$$
 where 
 - $\alpha$ is **learning rate** between $0$ and $1$, that controls how big of a step we take downhill $\Rightarrow$ Huge $\alpha$ corresponds to very aggressive gradient descent procedure as will take huge steps downhill.
-- $\frac{\partial}{\partial w}J(w,b)$ is the **derivative** term of cost function $J$. In layman terms, it tell us the direction (of the steepest descent) in which we want to take baby steps.
-
+- $\frac{\partial}{\partial w}J(w,b)$ is the **partial derivative** term of cost function $J$. In layman terms, it tell us the direction (of the steepest descent) in which we want to take baby steps.
 
 ### Gradient Descent intuition
+<p align="center">
+<img src="attachments/gradient_descent_intuition_1.png" width="35%" padding="30px">
+</p>
+
+Let's say that we have a cost function, $J$ of just one parameter $w$. So, gradient descent now looks like
+$$ w=w-\alpha\frac{\partial}{\partial w}J(w) $$
+$$\underset{w}{\text{min}}\phantom{1}J(w)$$
+
+<p align="center">
+<img src="attachments/gradient_descent_intuition_2.png" width="40%" padding="30px">
+</p>
+
+- When the $\frac{\mathrm{d}}{\mathrm{d}w}J(w)$ is positive, the updated $w$ is smaller. $\Rightarrow$ On the graph, we are moving to the left as we are decreasing the value of $w$.
+  - > At point $P _{1}$, derivative at this point is to draw a tangent line, which is a straight line that touches this curve at point $P _{1}$. The slope of this tangent line is the derivative of the function $J$ at this point. When the tangent lins is pointing up and to the right, the slope is positive.
+- When the $\frac{\mathrm{d}}{\mathrm{d}w}J(w)$ is negative, the updated $w$ is larger. $\Rightarrow$ On the graph, we are moving to the right as we are increasing the value of $w$.
 
 ### Learning rate
+<p align="center">
+<img src="attachments/learning_rate_1.png" width="40%" padding="30px">
+</p>
+
+$w=w-\alpha\frac{\partial}{\partial w}J(w)$
+- If $\alpha$ is too small, gradient descent will work, but may be slow as it will be taking tiny tiny steps every steps  before it reaches the minima
+- If $\alpha$ is too large, though the derivative might be a small value that points in the right direction, as the learning rate is multiplied with derivative, it will end up being a very large value and might overshoot. As we will be taking huge steps, we may never reach minimum. $\Rightarrow$ Fail to converge, and may even diverge. 
+
+<p align="center">
+<img src="attachments/learning_rate_2.png" width="40%" padding="30px">
+</p>
+
+In the above case, the final value of $w$ that will be selected by gradient descent (in the aim of reaching local minimum) will depend on it's initial value at the start, $w _{initial}$ and learning rate, $\alpha$.  
+
+<p align="center">
+<img src="attachments/learning_rate_3.png" width="40%" padding="30px">
+</p>
+
+As we get closer to the local minimum, the gradient descent starts making smaller steps, because as we approach local minimum, the derivative automatically gets smaller. $\Rightarrow$ Update steps also gets smaller.
 
 ### Gradient descent for linear regression
 
+
+<p align="center">
+<img src="attachments/gradient_descent_for_linear_regression_1.png" width="40%" padding="30px">
+</p>
+
+- Linear regression model
+  - $$f _{w,b}(x)=wx+b$$
+- Cost function
+  - $$J(w,b) = \frac{1}{2m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})^2$$
+- Gradient descent alogirthm
+  - repeat until convergence
+    - $$w=w-\alpha\frac{\partial}{\partial w}J(w,b) \Rightarrow \frac{\partial}{\partial w}J(w,b) = \frac{1}{m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})x^{i}$$
+    - $$b=b-\alpha\frac{\partial}{\partial b}J(w,b) \Rightarrow \frac{\partial}{\partial b}J(w,b) = \frac{1}{m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})$$
+
+But, how did we compute the the parital derivatives for $w$ and $b$?
+<p align="center">
+<img src="attachments/gradient_descent_for_linear_regression_2.png" width="40%" padding="30px">
+</p>
+
+$$ \frac{\partial}{\partial w}J(w,b) = \frac{\partial}{\partial w}\frac{1}{2m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})^2 = \frac{\partial}{\partial w}\frac{1}{2m}\sum _{i=1}^{m}(wx^{(i)}+b-y^{(i)})^2 \\
+\phantom{10}  = \frac{1}{2m}\sum _{i=1}^{m}(wx^{(i)}+b-y^{(i)})\times 2x^{(i)} = \frac{1}{m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})x^{i}$$
+
+
+<p align="center">
+<img src="attachments/gradient_descent_for_linear_regression_3.png" width="40%" padding="30px">
+</p>
+
 ### Running gradient descent
 
+
+
+
 ### Optional lab: Gradient Descent
+
 
 ## Practice Quiz: Train the model with gradient descent
