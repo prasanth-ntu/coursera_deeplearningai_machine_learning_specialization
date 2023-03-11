@@ -22,7 +22,7 @@
     - [Visualizing the cost function](#visualizing-the-cost-function)
     - [Visualization examples](#visualization-examples)
     - [Optional lab: Cost function](#optional-lab-cost-function)
-  - [Practice Quiz": Regression Model](#practice-quiz-regression-model)
+  - [Practice Quiz: Regression Model](#practice-quiz-regression-model)
   - [Train the model with gradient descent](#train-the-model-with-gradient-descent)
     - [Gradient descent](#gradient-descent)
     - [Implementing gradient descent](#implementing-gradient-descent)
@@ -267,17 +267,46 @@ Say, we have 3 training samples at $(1,1)$, $(2,2)$ and $(3,3)$. For different v
 
 Since $J$ is the cost function that measures how big the squared errors are, so choosing $w$ that minimizes these squared errors, makes them errors as small as possible, gives us a good model.
 
-> Goal of linear regression<br>
-> Simplliefed case: $\underset{w}{\text{minimize}}\phantom{1}J(w)$ <br>
-> General case: $\underset{w,b}{\text{minimize}}\phantom{1}J(w,b)$ 
+> **Goal of linear regression**<br>
+> - Simplliefed case: $\underset{w}{\text{minimize}}\phantom{1}J(w)$ <br>
+> - General case: $\underset{w,b}{\text{minimize}}\phantom{1}J(w,b)$ 
  
 ### Visualizing the cost function
 
+| Term | Org. equation | Simplified |
+| :---- | :-------------: | :----------: |
+| Model | $f_{w, b}{(x)} = wx + b$ |  $f_{w}{(x)} = wx$ by setting $b=0$|
+| Parameters | $w,b$ | $w$ |
+| Cost function | $J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w, b}{x^{(i)}}-y^{(i)})}^{2}$ |  $J(w) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w}{x^{(i)}}-y^{(i)})}^{2}$ |
+| Goal | $\underset{w,b}{\text{minimize}}\phantom{1}J(w,b)$ | $\underset{w}{\text{minimize}}\phantom{1}J(w)$ |
+
+<p align="center">
+<img src="attachments/regression_visualizaing_cost_function_1.png" width="40%" padding="30px">
+<img src="attachments/regression_visualizaing_cost_function_2.png" width="40%" padding="30px">
+</p>
+
+Since, we have two parameters $w$ and $b$ in this problem, the cost function has to be visualized in 3D. Rather than using 3D surface plots, we can plot it using contour plots. 
+
+<p align="center">
+<img src="attachments/regression_visualizaing_cost_function_3.png" width="40%" padding="30px">
+<img src="attachments/regression_visualizaing_cost_function_4.png" width="40%" padding="30px">
+</p>
+
+<p align="center">
+<img src="attachments/regression_visualizaing_cost_function_5.png" width="50%" padding="30px">
+</p>
+
+The bottom of above fig is a 3D-surface plot of the cost function, $J$. On upper right, we have contour plot of the same cost function. The two axis in the contour plot are $w$ and $b$. 
+
+
+
 ### Visualization examples
+
 
 ### Optional lab: Cost function
 
-## Practice Quiz": Regression Model
+
+## Practice Quiz: Regression Model
 
 ## Train the model with gradient descent
 
