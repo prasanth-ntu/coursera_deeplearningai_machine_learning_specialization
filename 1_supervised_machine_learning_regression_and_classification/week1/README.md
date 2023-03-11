@@ -225,7 +225,6 @@ How to find $w$ and $b$, such that predicted value $\hat{y} _{i}$ is close to ac
 $$ J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(\hat{y}_{i} - y_{i})}^{2}$$  
 $$ J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w, b}{(x^{i})}  - y_{i})}^{2}$$  
 
-Test $\sum_{i=1}^{m}x$
 
 ### Cost function intuition
 regression_cost_function_intuition_5
@@ -239,26 +238,39 @@ We want to fit the model using straight line, by choosing $w$ and $b$ such that 
 | :---- | :-------------: | :----------: |
 | Model | $f_{w, b}{(x)} = wx + b$ |  $f_{w}{(x)} = wx$ by setting $b=0$|
 | Parameters | $w,b$ | $w$ |
-| Cost function | $J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w, b}{(x^{i})}-y_{i})}^{2}$ |  $J(w) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w,}{(x^{i})}-y_{i})}^{2}$ |
+| Cost function | $J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w, b}{x^{(i)}}-y^{(i)})}^{2}$ |  $J(w) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w}{x^{(i)}}-y^{(i)})}^{2}$ |
 | Goal | $\underset{w,b}{\text{minimize}}\phantom{1}J(w,b)$ | $\underset{w}{\text{minimize}}\phantom{1}J(w)$ |
 
 Using the simplified model, let's see how the cost function changes if we choose e different value for parameter $w$. 
 
-<p align="center">
-<img src="attachments/regression_cost_function_intuition_2.png" width="50%" padding="30px">
+Say, we have 3 training samples at $(1,1)$, $(2,2)$ and $(3,3)$. For different values of $w$, we can compute $f _{w}(x)$ and the corresponding $J(w)$ and plot it as follows:
 
-</p>
 <p align="center">
-<img src="attachments/regression_cost_function_intuition_3.png" width="50%" padding="30px">
+<img src="attachments/regression_cost_function_intuition_2.png" width="40%" padding="30px">
+<img src="attachments/regression_cost_function_intuition_3.png" width="40%" padding="30px">
+<br>
+<img src="attachments/regression_cost_function_intuition_3.png" width="40%" padding="30px">
+<img src="attachments/regression_cost_function_intuition_4.png" width="40%" padding="30px">
 </p>
-<p align="center">
-<img src="attachments/regression_cost_function_intuition_4.png" width="50%" padding="30px">
-</p>
+
+| $w$ | $f _{w}(x)=wx$ | $J(w)$ | 
+| --- | ----------- | ----------- |
+| $w=1$ | $f(x) = x$ |  $J(1)=\frac{1}{2m}(0^2 + 0^2 + 0^2)$ = 0 |
+| $w=.5$ | $f(x) = 0.5x$ |  $J(0.5)=\frac{1}{2m}[(0.5-1)^2 + (1-2)^2 + (1.5-3)^2]= \frac{1}{2*3}[3.5] \approx 0.58$
+| $w=0$ | $f(x) = 0$ |  $J(0.5)=\frac{1}{2m}[(0-1)^2 + (0-2)^2 + (0-3)^2]= \frac{1}{2*3}[13] \approx 6.5$ |
+| $w=-.5$ | $f(x) = -0.5x$ |  $J(-0.5)=\frac{1}{2m}[(-0.5-1)^2 + (-1-2)^2 + (-1.5-3)^2]= \frac{1}{2*3}[14] \approx 2.3$ |
+|
+
 <p align="center">
 <img src="attachments/regression_cost_function_intuition_5.png" width="50%" padding="30px">
 </p>
 
+Since $J$ is the cost function that measures how big the squared errors are, so choosing $w$ that minimizes these squared errors, makes them errors as small as possible, gives us a good model.
 
+> Goal of linear regression<br>
+> Simplliefed case: $\underset{w}{\text{minimize}}\phantom{1}J(w)$ <br>
+> General case: $\underset{w,b}{\text{minimize}}\phantom{1}J(w,b)$ 
+ 
 ### Visualizing the cost function
 
 ### Visualization examples
