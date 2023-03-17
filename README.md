@@ -11,3 +11,4 @@ Course Link: https://www.coursera.org/specializations/machine-learning-introduct
 ## C1
 ### W2
 - [ ] Run through different normalization techniques, advantages and disadvantages. Which classifiers needs normalization and why? 
+- [ ] Run through Linear Regression based on OLS method
