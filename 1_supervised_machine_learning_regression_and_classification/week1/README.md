@@ -1,6 +1,6 @@
-# Week 1: Introduction to Machine Learning
+# Course 1 Week 1: Introduction to Machine Learning
 
-- [Week 1: Introduction to Machine Learning](#week-1-introduction-to-machine-learning)
+- [Course 1 Week 1: Introduction to Machine Learning](#course-1-week-1-introduction-to-machine-learning)
   - [Overview of Machine Learning](#overview-of-machine-learning)
     - [Welcome to machine learning](#welcome-to-machine-learning)
     - [Applications of machine learning](#applications-of-machine-learning)
@@ -135,8 +135,8 @@ Refer to [greyhatguy007](greyhatguy007/Practice%20quiz-%20Supervised%20vs%20unsu
 
 ## Regression Model
 ### Linear regression model part 1
-Regression models: Any supervised model that preidcts a number such as 220,000 or 1.5 or -33.2.
-Clasification models" Predicts categories or discrete categories, such as predicting if a picture is a cat or dog. Or if given a medical record, it has to predict if a patient has a particular disease.
+- Regression models: Any supervised model that preidcts a number such as 220,000 or 1.5 or -33.2.
+- Clasification models" Predicts categories or discrete categories, such as predicting if a picture is a cat or dog. Or if given a medical record, it has to predict if a patient has a particular disease.
 
 Linear regression model
 - Model that fits a straight line to our data.
@@ -227,7 +227,7 @@ $$ J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}{(f_{w, b}{(x^{i})}  - y_{i})}^{2}$$
 
 
 ### Cost function intuition
-9
+
 <p align="center">
 <img src="attachments/regression_cost_function_intuition_1.png" width="50%" padding="30px">
 </p>
@@ -329,7 +329,7 @@ Refer to [greyhatguy007](greyhatguy007/Optional%20Labs/C1_W1_Lab04_Cost_function
 ### Gradient descent
 
 **Gradient Descent**
-- Algo that can be used to find the optimal parameters $w$ and $b$ that minimises the cost function, $J(w,b).
+- Algo that can be used to find the optimal parameters $w$ and $b$ that minimises the cost function, $J(w,b)$.
 - Is used not only in linear regression, but also for training some of the most advanced neural network models, including deep learning models.
 
 <p align="center">
@@ -406,7 +406,7 @@ As we get closer to the local minimum, the gradient descent starts making smalle
   - $$f _{w,b}(x)=wx+b$$
 - Cost function
   - $$J(w,b) = \frac{1}{2m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})^2$$
-- Gradient descent alogirthm
+- Gradient descent algoirthm
   - repeat until convergence
     - $$w=w-\alpha\frac{\partial}{\partial w}J(w,b) \Rightarrow \frac{\partial}{\partial w}J(w,b) = \frac{1}{m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})x^{i}$$
     - $$b=b-\alpha\frac{\partial}{\partial b}J(w,b) \Rightarrow \frac{\partial}{\partial b}J(w,b) = \frac{1}{m}\sum _{i=1}^{m}(f _{w,b}(x^{(i)})-y^{(i)})$$
