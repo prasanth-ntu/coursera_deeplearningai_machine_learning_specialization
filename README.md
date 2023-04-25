@@ -7,6 +7,12 @@ Course Link: https://www.coursera.org/specializations/machine-learning-introduct
   - Week 2: Regression with multiple input variables | [Notes](1_supervised_machine_learning_regression_and_classification/week2/README.ipynb)
   - Week 3: Classification | [Notes](1_supervised_machine_learning_regression_and_classification/week3/README.ipynb)
 
+- Course 2: Advanced Learning Algorithms | [Summary Notes]
+  - Week 1: Neural networks | [Notes](2_advanced_learning_algorithms/week1/README.ipynb)
+  - Week 2: Neural networks training | [Notes]
+  - Week 3: Advice for applying machine learning | [Notes]
+  - Week 4: Decision Trees | [Notes]
+
 # Mind Maps
 
 <p align="center">
@@ -19,3 +25,9 @@ Course Link: https://www.coursera.org/specializations/machine-learning-introduct
 - [ ] Run through different normalization techniques, advantages and disadvantages. Which classifiers needs normalization and why? 
 - [ ] Run through Linear Regression based on OLS method
 - [ ] Run through Maximum Likelihood Estimation for Logistic Regression
+
+## C2
+### W1
+- [ ] Run through the *Practice Lab: Neural networks* again in a new notebook from scratch 
+### W4
+- [ ] Decision trees - Feature importance interpretation using **SHAP**
