@@ -29,5 +29,7 @@ Course Link: https://www.coursera.org/specializations/machine-learning-introduct
 ## C2
 ### W1
 - [ ] Run through the *Practice Lab: Neural networks* again in a new notebook from scratch 
+### W2
+- [ ] Different activation functions (Why ReLU is better than sigmoid for hidden layers?)
 ### W4
 - [ ] Decision trees - Feature importance interpretation using **SHAP**
