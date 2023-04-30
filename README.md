@@ -9,9 +9,9 @@ Course Link: https://www.coursera.org/specializations/machine-learning-introduct
 
 - Course 2: Advanced Learning Algorithms | [Summary Notes]
   - Week 1: Neural networks | [Notes](2_advanced_learning_algorithms/week1/README.ipynb)
-  - Week 2: Neural networks training | [Notes]
-  - Week 3: Advice for applying machine learning | [Notes]
-  - Week 4: Decision Trees | [Notes]
+  - Week 2: Neural networks training | [Notes](2_advanced_learning_algorithms/week2/README.ipynb)
+  - Week 3: Advice for applying machine learning | [Notes](2_advanced_learning_algorithms/week3/README.ipynb)
+  - Week 4: Decision Trees | [Notes](2_advanced_learning_algorithms/week4/README.ipynb) 
 
 # Mind Maps
 
@@ -31,5 +31,6 @@ Course Link: https://www.coursera.org/specializations/machine-learning-introduct
 - [ ] Run through the *Practice Lab: Neural networks* again in a new notebook from scratch 
 ### W2
 - [ ] Different activation functions (Why ReLU is better than sigmoid for hidden layers?)
+- [ ] Log odds and logits is the same (Write the derivation and rest in the miscellaneous section)
 ### W4
 - [ ] Decision trees - Feature importance interpretation using **SHAP**
