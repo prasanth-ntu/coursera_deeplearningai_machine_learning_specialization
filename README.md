@@ -35,5 +35,6 @@ Course Link: https://www.coursera.org/specializations/machine-learning-introduct
 ### W3
 - [ ] Revisit the optional labs later as I could not locate it in internet
   - [ ] For `C2W3_Lab_01_Model_Evaluation_and_Selection`, run through each code, as well as utils.py to understand about plot generation and NN models used in for loop, and try to code the whole exercise from scratch as a practice
+  - [ ] For `C2W3_Lab_02_Diagnosing_Bias_and_Variance`, run through each code and try to code the exercise from scratch as a practice
 ### W4
 - [ ] Decision trees - Feature importance interpretation using **SHAP**
