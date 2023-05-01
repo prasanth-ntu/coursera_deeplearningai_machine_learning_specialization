@@ -32,5 +32,8 @@ Course Link: https://www.coursera.org/specializations/machine-learning-introduct
 ### W2
 - [ ] Different activation functions (Why ReLU is better than sigmoid for hidden layers?)
 - [ ] Log odds and logits is the same (Write the derivation and rest in the miscellaneous section)
+### W3
+- [ ] Revisit the optional labs later as I could not locate it in internet
+  - [ ] For `C2W3_Lab_01_Model_Evaluation_and_Selection`, run through each code, as well as utils.py to understand about plot generation and NN models used in for loop, and try to code the whole exercise from scratch as a practice
 ### W4
 - [ ] Decision trees - Feature importance interpretation using **SHAP**
